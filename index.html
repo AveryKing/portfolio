@@ -105,9 +105,9 @@
                     With over three years of experience, I engineer mission-critical applications for regulated industries, transforming complex business requirements into secure, scalable, and high-impact enterprise solutions.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
-                     <a href="Resume.pdf" target="_blank" rel="noopener noreferrer" class="inline-block w-full sm:w-auto bg-transparent border-2 border-sky-500 text-sky-500 font-bold text-lg px-8 py-3 rounded-lg hover:bg-sky-500 hover:text-white transition-all duration-300">
+                     <button id="view-resume-button" class="inline-block w-full sm:w-auto bg-transparent border-2 border-sky-500 text-sky-500 font-bold text-lg px-8 py-3 rounded-lg hover:bg-sky-500 hover:text-white transition-all duration-300">
                         View Resume
-                    </a>
+                    </button>
                     <div class="flex items-center space-x-6">
                         <a href="https://github.com/averyking" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-sky-400 transition-colors">
                             <i data-lucide="github" class="w-8 h-8"></i>
@@ -200,6 +200,17 @@
             </a>
         </section>
     </main>
+    
+    <!-- Resume Modal -->
+    <div id="resume-modal" class="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-[999] hidden p-4">
+        <div class="bg-slate-900 rounded-lg shadow-xl w-full max-w-4xl h-full max-h-[90vh] p-4 relative">
+            <button id="close-modal-button" class="absolute -top-3 -right-3 text-white bg-slate-700 rounded-full w-10 h-10 flex items-center justify-center hover:bg-sky-500 transition-colors z-10">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <embed src="Resume.pdf" type="application/pdf" class="w-full h-full rounded-md">
+        </div>
+    </div>
+
 
     <!-- Footer -->
     <footer class="border-t border-slate-800">
@@ -239,8 +250,30 @@
         targets.forEach(target => {
             observer.observe(target);
         });
+        
+        // Resume Modal Logic
+        const viewResumeButton = document.getElementById('view-resume-button');
+        const resumeModal = document.getElementById('resume-modal');
+        const closeModalButton = document.getElementById('close-modal-button');
+
+        if (viewResumeButton && resumeModal && closeModalButton) {
+            viewResumeButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                resumeModal.classList.remove('hidden');
+            });
+
+            closeModalButton.addEventListener('click', () => {
+                resumeModal.classList.add('hidden');
+            });
+
+            // Close modal when clicking outside the content
+            resumeModal.addEventListener('click', (e) => {
+                if (e.target === resumeModal) {
+                    resumeModal.classList.add('hidden');
+                }
+            });
+        }
     </script>
 </body>
 </html>
-
 
