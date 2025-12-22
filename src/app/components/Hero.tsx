@@ -17,7 +17,7 @@ const floatingAnimation = {
     ease: "easeInOut",
   },
 };
-
+//
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
