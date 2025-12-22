@@ -39,7 +39,7 @@ export function Skills() {
   const { ref, isInView } = useInView();
 
   return (
-    <section id="skills" className="relative px-4 py-32">
+    <section id="skills" className="relative px-4 py-20 sm:py-24 lg:py-32">
       <div className="max-w-6xl mx-auto">
         <motion.div
           ref={ref}
@@ -62,7 +62,7 @@ export function Skills() {
                 <div className="absolute inset-0 blur-xl bg-cyan-500/20 rounded-full" />
               </div>
             </motion.div>
-            <h2 className="text-6xl md:text-7xl font-black mb-6 relative">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-6 relative leading-tight text-balance">
               <span className="bg-gradient-to-r from-cyan-400 via-pink-400 to-white bg-clip-text text-transparent">
                 Technical Skills
               </span>
@@ -70,7 +70,7 @@ export function Skills() {
                 Technical Skills
               </div>
             </h2>
-            <p className="text-gray-300 text-xl max-w-2xl mx-auto font-medium">
+            <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto font-medium text-balance">
               A comprehensive toolkit for building modern, scalable applications
             </p>
           </div>
@@ -91,7 +91,7 @@ export function Skills() {
                     whileHover={{ scale: 1.1 }}
                   />
                   
-                  <div className="relative h-full bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-6 border border-white/20 hover:border-white/40 transition-all duration-500">
+                     <div className="relative h-full bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-6 border border-white/20 hover:border-white/40 transition-all duration-500">
                     <div className="flex items-center gap-3 mb-6">
                       <motion.div 
                         className={`p-3 bg-gradient-to-r ${category.color} rounded-xl shadow-lg`}
@@ -111,11 +111,11 @@ export function Skills() {
                           animate={isInView ? { opacity: 1, scale: 1 } : {}}
                           transition={{ delay: index * 0.1 + i * 0.05, duration: 0.3 }}
                           whileHover={{ scale: 1.1, y: -2 }}
-                          className="px-4 py-2 bg-white/10 text-gray-200 rounded-lg font-semibold border border-white/20 hover:border-white/40 hover:bg-white/15 transition-all cursor-default shadow-lg"
-                        >
-                          {skill}
-                        </motion.span>
-                      ))}
+                           className="px-4 py-2 bg-white/10 text-gray-200 rounded-lg font-semibold border border-white/20 hover:border-white/40 hover:bg-white/15 transition-all cursor-default shadow-lg"
+                         >
+                           {skill}
+                         </motion.span>
+                       ))}
                     </div>
                   </div>
                 </motion.div>
@@ -141,7 +141,7 @@ export function Skills() {
                 ease: "easeInOut"
               }}
             />
-            <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-10 border border-white/20 hover:border-emerald-500/40 transition-all">
+            <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-6 sm:p-8 md:p-10 border border-white/20 hover:border-emerald-500/40 transition-all">
               <div className="flex items-center gap-3 mb-6">
                 <motion.div
                   animate={{ 
@@ -155,7 +155,7 @@ export function Skills() {
                 >
                   <Zap className="w-8 h-8 text-yellow-400" />
                 </motion.div>
-                <h3 className="text-2xl font-black text-white">Additional Expertise</h3>
+                <h3 className="text-xl sm:text-2xl font-black text-white">Additional Expertise</h3>
               </div>
               <div className="flex flex-wrap gap-3">
                 {[

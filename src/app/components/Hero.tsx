@@ -20,7 +20,7 @@ const floatingAnimation = {
 //
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
+    <section className="relative min-h-screen flex items-center justify-center px-4 pt-28 pb-16 sm:pt-32 sm:pb-20">
       {/* Animated gradient orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -129,7 +129,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
         >
-          <h1 className="text-7xl md:text-9xl font-black mb-6 relative">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 relative leading-tight text-balance">
             <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent">
               Avery King
             </span>
@@ -139,28 +139,28 @@ export function Hero() {
           </h1>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-          className="mb-8"
-        >
-          <p className="text-2xl md:text-3xl font-bold mb-2">
-            <span className="bg-gradient-to-r from-gray-100 to-gray-400 bg-clip-text text-transparent">
-              .NET & JavaScript Specialist
-            </span>
-          </p>
-          <div className="flex items-center justify-center gap-2 text-lg text-gray-400">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span>Cloud Architecture • Azure & GCP</span>
-          </div>
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="mb-8"
+          >
+            <p className="text-lg sm:text-xl md:text-2xl font-bold mb-2 text-balance">
+              <span className="bg-gradient-to-r from-gray-100 to-gray-400 bg-clip-text text-transparent">
+                .NET & JavaScript Specialist
+              </span>
+            </p>
+            <div className="flex items-center justify-center gap-2 text-sm sm:text-base md:text-lg text-gray-400">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="text-balance">Cloud Architecture • Azure & GCP</span>
+            </div>
+          </motion.div>
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.8 }}
-          className="text-xl md:text-2xl text-gray-400 max-w-4xl mx-auto mb-12 leading-relaxed"
+          className="text-base sm:text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed text-balance"
         >
           Crafting{" "}
           <span className="text-emerald-400 font-semibold">
@@ -179,7 +179,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="flex flex-wrap items-center justify-center gap-6 text-gray-400 mb-12"
+          className="flex flex-wrap items-center justify-center gap-6 text-gray-400 mb-12 text-sm sm:text-base"
         >
           <motion.a
             href="mailto:avery@averyk.dev"
@@ -218,10 +218,10 @@ export function Hero() {
               boxShadow: "0 0 40px rgba(16, 185, 129, 0.4)",
             }}
             whileTap={{ scale: 0.95 }}
-            className="group relative px-10 py-4 bg-gradient-to-r from-emerald-600 to-cyan-600 rounded-full overflow-hidden shadow-lg shadow-emerald-500/30"
+            className="group relative px-10 py-4 bg-gradient-to-r from-emerald-600 to-cyan-600 rounded-full overflow-hidden shadow-lg shadow-emerald-500/30 w-full sm:w-auto"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity" />
-            <span className="relative flex items-center justify-center gap-2 font-bold text-lg">
+            <span className="relative flex items-center justify-center gap-2 font-bold text-base sm:text-lg">
               Let's Connect
               <ExternalLink className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </span>
@@ -231,7 +231,7 @@ export function Hero() {
             href="#experience"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-10 py-4 bg-white/5 backdrop-blur-sm rounded-full border-2 border-emerald-500/30 hover:bg-white/10 hover:border-emerald-400/50 transition-all font-bold text-lg"
+            className="px-10 py-4 bg-white/5 backdrop-blur-sm rounded-full border-2 border-emerald-500/30 hover:bg-white/10 hover:border-emerald-400/50 transition-all font-bold text-base sm:text-lg w-full sm:w-auto"
           >
             View My Work
           </motion.a>

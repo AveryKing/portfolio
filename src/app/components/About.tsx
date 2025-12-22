@@ -27,7 +27,7 @@ export function About() {
   const { ref, isInView } = useInView();
 
   return (
-    <section id="about" className="relative px-4 py-32">
+    <section id="about" className="relative px-4 py-20 sm:py-24 lg:py-32">
       <div className="max-w-6xl mx-auto">
         <motion.div
           ref={ref}
@@ -50,7 +50,7 @@ export function About() {
                 <div className="absolute inset-0 blur-xl bg-emerald-500/20 rounded-full" />
               </div>
             </motion.div>
-            <h2 className="text-6xl md:text-7xl font-black mb-6 relative">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-6 relative leading-tight text-balance">
               <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-white bg-clip-text text-transparent">
                 Building the Future
               </span>
@@ -82,12 +82,12 @@ export function About() {
                     >
                       <Icon className="w-10 h-10 text-emerald-400 mb-4" />
                     </motion.div>
-                    <div className={`text-5xl font-black mb-2 bg-gradient-to-r ${item.color} bg-clip-text text-transparent`}>
-                      {item.number}
-                    </div>
-                    <div className="text-gray-300 font-medium">{item.label}</div>
-                  </div>
-                </motion.div>
+                     <div className={`text-4xl sm:text-5xl font-black mb-2 bg-gradient-to-r ${item.color} bg-clip-text text-transparent`}>
+                       {item.number}
+                     </div>
+                     <div className="text-gray-300 font-medium">{item.label}</div>
+                   </div>
+                 </motion.div>
               );
             })}
           </div>
@@ -99,8 +99,8 @@ export function About() {
             className="relative group"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 via-cyan-600/20 to-pink-600/20 rounded-3xl blur-2xl" />
-            <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-12 border border-white/20 hover:border-emerald-500/40 transition-all">
-              <div className="space-y-6 text-lg leading-relaxed">
+            <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-8 sm:p-10 md:p-12 border border-white/20 hover:border-emerald-500/40 transition-all">
+              <div className="space-y-6 text-base sm:text-lg leading-relaxed text-balance">
                 <p className="text-gray-200">
                   I'm a Software Engineer with <span className="text-white font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">3+ years of professional experience</span> designing 
                   and delivering secure, mission-critical systems in <span className="text-emerald-400 font-bold">GovTech and FinTech</span>, 

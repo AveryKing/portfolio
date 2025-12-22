@@ -21,7 +21,7 @@ export function Projects() {
   const { ref, isInView } = useInView();
 
   return (
-    <section id="projects" className="relative px-4 py-32">
+    <section id="projects" className="relative px-4 py-20 sm:py-24 lg:py-32">
       <div className="max-w-6xl mx-auto">
         <motion.div
           ref={ref}
@@ -44,7 +44,7 @@ export function Projects() {
                 <div className="absolute inset-0 blur-xl bg-pink-500/20 rounded-full" />
               </div>
             </motion.div>
-            <h2 className="text-6xl md:text-7xl font-black relative">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black relative leading-tight text-balance">
               <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-white bg-clip-text text-transparent">
                 Projects
               </span>
@@ -70,7 +70,7 @@ export function Projects() {
                 
                 <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl overflow-hidden border border-white/20 hover:border-pink-500/50 transition-all duration-500">
                   {/* Header with animated gradient */}
-                  <div className="relative bg-gradient-to-r from-pink-600/20 via-purple-600/20 to-cyan-600/20 p-10 border-b border-white/10">
+                  <div className="relative bg-gradient-to-r from-pink-600/20 via-purple-600/20 to-cyan-600/20 p-6 sm:p-8 md:p-10 border-b border-white/10">
                     <motion.div 
                       className="absolute inset-0 bg-gradient-to-r from-pink-500/10 via-purple-500/10 to-cyan-500/10"
                       animate={{
@@ -96,7 +96,7 @@ export function Projects() {
                           <Rocket className="w-10 h-10 text-white" />
                         </motion.div>
                         <div>
-                          <h3 className="text-4xl font-black text-white mb-2 flex items-center gap-3">
+                          <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-2 flex items-center gap-3 leading-tight text-balance">
                             {project.title}
                             <motion.span
                               animate={{ 
@@ -111,7 +111,7 @@ export function Projects() {
                               <Zap className="w-8 h-8 text-yellow-400" />
                             </motion.span>
                           </h3>
-                          <p className="text-2xl font-bold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
+                          <p className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
                             {project.role}
                           </p>
                         </div>
@@ -124,8 +124,8 @@ export function Projects() {
                   </div>
 
                   {/* Content */}
-                  <div className="p-10">
-                    <p className="text-xl text-gray-200 leading-relaxed mb-10 font-medium">
+                  <div className="p-6 sm:p-8 md:p-10">
+                    <p className="text-base sm:text-lg text-gray-200 leading-relaxed mb-10 font-medium text-balance">
                       {project.description}
                     </p>
 
@@ -134,19 +134,19 @@ export function Projects() {
                         <Sparkles className="w-6 h-6" />
                         <span className="text-xl font-bold">Key Achievements</span>
                       </div>
-                      {project.achievements.map((achievement, i) => (
-                        <motion.div
-                          key={i}
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={isInView ? { opacity: 1, x: 0 } : {}}
-                          transition={{ delay: index * 0.2 + i * 0.1, duration: 0.5 }}
-                          className="flex gap-4 group/item bg-gradient-to-r from-white/10 to-white/5 p-5 rounded-xl hover:from-white/15 hover:to-white/10 transition-all border border-white/10 hover:border-pink-500/30"
-                        >
-                          <CircuitBoard className="w-6 h-6 text-emerald-400 flex-shrink-0 mt-1" />
-                          <p className="text-gray-200 leading-relaxed text-lg">{achievement}</p>
-                        </motion.div>
-                      ))}
-                    </div>
+                        {project.achievements.map((achievement, i) => (
+                          <motion.div
+                            key={i}
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={isInView ? { opacity: 1, x: 0 } : {}}
+                            transition={{ delay: index * 0.2 + i * 0.1, duration: 0.5 }}
+                            className="flex gap-4 group/item bg-gradient-to-r from-white/10 to-white/5 p-5 rounded-xl hover:from-white/15 hover:to-white/10 transition-all border border-white/10 hover:border-pink-500/30"
+                          >
+                            <CircuitBoard className="w-6 h-6 text-emerald-400 flex-shrink-0 mt-1" />
+                            <p className="text-gray-200 leading-relaxed text-sm sm:text-base lg:text-lg text-balance">{achievement}</p>
+                          </motion.div>
+                        ))}
+                      </div>
 
                     <div className="flex flex-wrap gap-3">
                       {project.tags.map((tag, i) => (
