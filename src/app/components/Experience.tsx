@@ -69,7 +69,7 @@ export function Experience() {
           </div>
 
           <div className="relative">
-            {/* Gradient connecting line - visible on tablet and up */}
+            {/* Gradient connecting line - visible on screens 640px and up (sm breakpoint) */}
             <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-emerald-500 via-cyan-500 to-transparent hidden sm:block rounded-full" />
 
             <div className="space-y-12">
@@ -81,7 +81,7 @@ export function Experience() {
                   transition={{ delay: index * 0.3, duration: 0.8 }}
                   className="relative group"
                 >
-                  {/* Animated Timeline Dot - visible on tablet and up */}
+                  {/* Animated Timeline Dot - visible on screens 640px and up (sm breakpoint) */}
                   <motion.div 
                     className="absolute left-8 top-8 w-6 h-6 -translate-x-1/2 rounded-full hidden sm:block"
                     whileHover={{ scale: 1.5 }}
