@@ -27,7 +27,7 @@ export function About() {
   const { ref, isInView } = useInView();
 
   return (
-    <section id="about" className="relative px-4 py-20 sm:py-24 lg:py-32">
+    <section id="about" className="relative px-3 sm:px-4 py-16 sm:py-24 lg:py-32">
       <div className="max-w-6xl mx-auto">
         <motion.div
           ref={ref}
@@ -60,7 +60,7 @@ export function About() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6 mb-12 sm:mb-16">
             {highlights.map((item, index) => {
               const Icon = item.icon;
               return (

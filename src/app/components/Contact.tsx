@@ -47,7 +47,7 @@ export function Contact() {
   const { ref, isInView } = useInView();
 
   return (
-    <section id="contact" className="relative px-4 py-20 sm:py-24 lg:py-32">
+    <section id="contact" className="relative px-3 sm:px-4 py-16 sm:py-24 lg:py-32">
       <div className="max-w-6xl mx-auto">
         <motion.div
           ref={ref}
@@ -83,7 +83,7 @@ export function Contact() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-12">
             {/* Contact Info */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}

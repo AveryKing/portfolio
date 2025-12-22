@@ -20,7 +20,7 @@ const floatingAnimation = {
 //
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 pt-28 pb-16 sm:pt-32 sm:pb-20">
+    <section className="relative min-h-screen flex items-center justify-center px-3 sm:px-4 pt-24 pb-12 sm:pt-32 sm:pb-20">
       {/* Animated gradient orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -64,13 +64,13 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto text-center">
-        {/* Floating decorative elements */}
-        <div className="absolute inset-0 pointer-events-none">
+        {/* Floating decorative elements - hidden on small mobile for cleaner look */}
+        <div className="absolute inset-0 pointer-events-none hidden sm:block">
           <motion.div
             animate={floatingAnimation}
             className="absolute top-20 left-10 text-emerald-400/20"
           >
-            <Code2 size={40} />
+            <Code2 className="w-10 h-10" />
           </motion.div>
           <motion.div
             animate={{
@@ -84,7 +84,7 @@ export function Hero() {
             }}
             className="absolute top-32 right-20 text-cyan-400/20"
           >
-            <Sparkles size={32} />
+            <Sparkles className="w-8 h-8" />
           </motion.div>
           <motion.div
             animate={{
@@ -98,7 +98,7 @@ export function Hero() {
             }}
             className="absolute bottom-40 left-1/4 text-pink-400/20"
           >
-            <Sparkles size={28} />
+            <Sparkles className="w-7 h-7" />
           </motion.div>
         </div>
 

@@ -23,7 +23,7 @@ export function Education() {
   const { ref, isInView } = useInView();
 
   return (
-    <section id="education" className="relative px-4 py-20 sm:py-24 lg:py-32">
+    <section id="education" className="relative px-3 sm:px-4 py-16 sm:py-24 lg:py-32">
       <div className="max-w-6xl mx-auto">
         <motion.div
           ref={ref}
@@ -56,7 +56,7 @@ export function Education() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 mb-12">
             {education.map((edu, index) => {
               const Icon = edu.icon;
               return (
