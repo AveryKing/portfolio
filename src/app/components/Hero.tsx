@@ -68,9 +68,9 @@ export function Hero() {
         <div className="absolute inset-0 pointer-events-none hidden sm:block">
           <motion.div
             animate={floatingAnimation}
-            className="absolute top-20 left-4 sm:left-10 text-emerald-400/20"
+            className="absolute top-20 left-10 text-emerald-400/20"
           >
-            <Code2 className="w-8 h-8 sm:w-10 sm:h-10" />
+            <Code2 className="w-10 h-10" />
           </motion.div>
           <motion.div
             animate={{
@@ -82,9 +82,9 @@ export function Hero() {
                 delay: 0.5,
               },
             }}
-            className="absolute top-32 right-4 sm:right-20 text-cyan-400/20"
+            className="absolute top-32 right-20 text-cyan-400/20"
           >
-            <Sparkles className="w-7 h-7 sm:w-8 sm:h-8" />
+            <Sparkles className="w-8 h-8" />
           </motion.div>
           <motion.div
             animate={{
@@ -98,7 +98,7 @@ export function Hero() {
             }}
             className="absolute bottom-40 left-1/4 text-pink-400/20"
           >
-            <Sparkles className="w-6 h-6 sm:w-7 sm:h-7" />
+            <Sparkles className="w-7 h-7" />
           </motion.div>
         </div>
 
