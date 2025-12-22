@@ -35,7 +35,7 @@ export function Experience() {
   const { ref, isInView } = useInView();
 
   return (
-    <section id="experience" className="relative px-4 py-20 sm:py-24 lg:py-32">
+    <section id="experience" className="relative px-3 sm:px-4 py-16 sm:py-24 lg:py-32">
       <div className="max-w-6xl mx-auto">
         <motion.div
           ref={ref}
@@ -69,8 +69,8 @@ export function Experience() {
           </div>
 
           <div className="relative">
-            {/* Gradient connecting line */}
-            <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-emerald-500 via-cyan-500 to-transparent hidden md:block rounded-full" />
+            {/* Gradient connecting line - visible on tablet and up */}
+            <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-emerald-500 via-cyan-500 to-transparent hidden sm:block rounded-full" />
 
             <div className="space-y-12">
               {experiences.map((exp, index) => (
@@ -81,9 +81,9 @@ export function Experience() {
                   transition={{ delay: index * 0.3, duration: 0.8 }}
                   className="relative group"
                 >
-                  {/* Animated Timeline Dot */}
+                  {/* Animated Timeline Dot - visible on tablet and up */}
                   <motion.div 
-                    className="absolute left-8 top-8 w-6 h-6 -translate-x-1/2 rounded-full hidden md:block"
+                    className="absolute left-8 top-8 w-6 h-6 -translate-x-1/2 rounded-full hidden sm:block"
                     whileHover={{ scale: 1.5 }}
                   >
                     <div className={`absolute inset-0 rounded-full bg-gradient-to-r ${exp.color}`} />
@@ -101,13 +101,13 @@ export function Experience() {
                     />
                   </motion.div>
 
-                  <div className="md:ml-20">
+                  <div className="sm:ml-20">
                     <motion.div 
                       className={`absolute inset-0 bg-gradient-to-r ${exp.color} rounded-3xl blur-2xl opacity-0 group-hover:opacity-20 transition-all duration-500`}
                       whileHover={{ scale: 1.02 }}
                     />
                     
-                    <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-6 sm:p-8 border border-white/20 hover:border-white/40 transition-all duration-500">
+                    <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-5 sm:p-8 border border-white/20 hover:border-white/40 transition-all duration-500">
                       <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6">
                         <div>
                           <div className="flex items-center gap-3 mb-3">
