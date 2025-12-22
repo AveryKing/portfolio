@@ -23,7 +23,7 @@ export function Education() {
   const { ref, isInView } = useInView();
 
   return (
-    <section id="education" className="relative px-4 py-32">
+    <section id="education" className="relative px-4 py-20 sm:py-24 lg:py-32">
       <div className="max-w-6xl mx-auto">
         <motion.div
           ref={ref}
@@ -46,7 +46,7 @@ export function Education() {
                 <div className="absolute inset-0 blur-xl bg-purple-500/20 rounded-full" />
               </div>
             </motion.div>
-            <h2 className="text-6xl md:text-7xl font-black relative">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black relative leading-tight text-balance">
               <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-white bg-clip-text text-transparent">
                 Education
               </span>
@@ -72,7 +72,7 @@ export function Education() {
                     whileHover={{ scale: 1.05 }}
                   />
                   
-                  <div className="relative h-full bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500">
+                  <div className="relative h-full bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-6 sm:p-8 border border-white/20 hover:border-white/40 transition-all duration-500">
                     <div className="flex items-start gap-4">
                       <motion.div 
                         className={`p-4 bg-gradient-to-r ${edu.color} rounded-2xl shadow-lg`}
@@ -85,8 +85,8 @@ export function Education() {
                         <div className="inline-block px-3 py-1 bg-white/10 rounded-full text-xs text-gray-300 font-semibold mb-3 border border-white/20">
                           {edu.type}
                         </div>
-                        <h3 className="text-2xl font-black text-white mb-3">{edu.degree}</h3>
-                        <p className={`text-xl font-bold bg-gradient-to-r ${edu.color} bg-clip-text text-transparent`}>
+                        <h3 className="text-xl sm:text-2xl font-black text-white mb-3">{edu.degree}</h3>
+                        <p className={`text-lg sm:text-xl font-bold bg-gradient-to-r ${edu.color} bg-clip-text text-transparent`}>
                           {edu.school}
                         </p>
                       </div>
@@ -121,7 +121,7 @@ export function Education() {
                 backgroundSize: "200% 200%"
               }}
             />
-            <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-10 border border-white/20 hover:border-pink-500/40 transition-all">
+            <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-6 sm:p-8 md:p-10 border border-white/20 hover:border-pink-500/40 transition-all">
               <div className="flex items-center gap-3 mb-6">
                 <motion.div
                   animate={{ 
@@ -135,9 +135,9 @@ export function Education() {
                 >
                   <TrendingUp className="w-8 h-8 text-pink-400" />
                 </motion.div>
-                <h3 className="text-2xl font-black text-white">Continuous Learning</h3>
+                <h3 className="text-xl sm:text-2xl font-black text-white">Continuous Learning</h3>
               </div>
-              <p className="text-gray-200 leading-relaxed text-lg font-medium">
+              <p className="text-gray-200 leading-relaxed text-base sm:text-lg font-medium text-balance">
                 Committed to staying current with emerging technologies and best practices through continuous 
                 professional development, hands-on project work, and active engagement with the developer community.
                 Always exploring new patterns, frameworks, and architectures to deliver cutting-edge solutions.

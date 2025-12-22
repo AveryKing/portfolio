@@ -47,7 +47,7 @@ export function Contact() {
   const { ref, isInView } = useInView();
 
   return (
-    <section id="contact" className="relative px-4 py-32">
+    <section id="contact" className="relative px-4 py-20 sm:py-24 lg:py-32">
       <div className="max-w-6xl mx-auto">
         <motion.div
           ref={ref}
@@ -70,7 +70,7 @@ export function Contact() {
                 <div className="absolute inset-0 blur-xl bg-pink-500/20 rounded-full" />
               </div>
             </motion.div>
-            <h2 className="text-6xl md:text-7xl font-black mb-6 relative">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-6 relative leading-tight text-balance">
               <span className="bg-gradient-to-r from-pink-400 via-cyan-400 to-white bg-clip-text text-transparent">
                 Get in Touch
               </span>
@@ -78,7 +78,7 @@ export function Contact() {
                 Get in Touch
               </div>
             </h2>
-            <p className="text-gray-300 text-xl max-w-2xl mx-auto font-medium">
+            <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto font-medium text-balance">
               I'm always open to discussing new opportunities, interesting projects, or potential collaborations.
             </p>
           </div>
@@ -123,7 +123,7 @@ export function Contact() {
                       </motion.div>
                       <div>
                         <p className="text-gray-400 text-sm font-semibold">{contact.label}</p>
-                        <p className="text-white font-bold text-lg">{contact.value}</p>
+                        <p className="text-white font-bold text-base sm:text-lg">{contact.value}</p>
                       </div>
                     </div>
                   </motion.a>
@@ -159,7 +159,7 @@ export function Contact() {
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-3xl blur-2xl" />
                 <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/20 hover:border-cyan-500/40 transition-all">
-                  <h3 className="text-2xl font-black text-white mb-4 flex items-center gap-2">
+                  <h3 className="text-xl sm:text-2xl font-black text-white mb-4 flex items-center gap-2">
                     Follow Me
                     <motion.span
                       animate={{ rotate: [0, 360] }}
@@ -168,7 +168,7 @@ export function Contact() {
                       ⭐
                     </motion.span>
                   </h3>
-                  <p className="text-gray-300 mb-6 font-medium">
+                  <p className="text-gray-300 mb-6 font-medium text-sm sm:text-base text-balance">
                     Connect with me on social media to stay updated with my latest projects and thoughts.
                   </p>
                   
@@ -217,16 +217,16 @@ export function Contact() {
                     ease: "easeInOut"
                   }}
                 />
-                <div className="relative bg-gradient-to-br from-pink-600/20 via-orange-600/20 to-emerald-600/20 backdrop-blur-xl rounded-3xl p-8 border border-pink-500/30 hover:border-pink-500/50 transition-all">
-                  <h3 className="text-2xl font-black text-white mb-3">Available for Opportunities</h3>
-                  <p className="text-gray-200 mb-6 font-medium leading-relaxed">
+                <div className="relative bg-gradient-to-br from-pink-600/20 via-orange-600/20 to-emerald-600/20 backdrop-blur-xl rounded-3xl p-6 sm:p-8 border border-pink-500/30 hover:border-pink-500/50 transition-all">
+                  <h3 className="text-xl sm:text-2xl font-black text-white mb-3">Available for Opportunities</h3>
+                  <p className="text-gray-200 mb-6 font-medium leading-relaxed text-sm sm:text-base text-balance">
                     Currently open to full-time positions and consulting projects in software engineering.
                   </p>
                   <motion.a
                     href="mailto:avery@averyk.dev"
                     whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(236, 72, 153, 0.4)" }}
                     whileTap={{ scale: 0.98 }}
-                    className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-pink-600 via-orange-600 to-emerald-600 rounded-xl text-white font-black text-lg hover:from-pink-500 hover:via-orange-500 hover:to-emerald-500 transition-all shadow-lg"
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-pink-600 via-orange-600 to-emerald-600 rounded-xl text-white font-black text-base sm:text-lg hover:from-pink-500 hover:via-orange-500 hover:to-emerald-500 transition-all shadow-lg"
                   >
                     <Mail className="w-6 h-6" />
                     Send a Message
@@ -243,7 +243,7 @@ export function Contact() {
             transition={{ delay: 1, duration: 0.8 }}
             className="text-center pt-12 border-t border-white/10"
           >
-            <p className="text-gray-400 font-medium">
+            <p className="text-gray-400 font-medium text-sm sm:text-base">
               © {new Date().getFullYear()} Avery King. Crafted with{" "}
               <span className="text-pink-400">❤</span> using React, Motion & Tailwind CSS.
             </p>

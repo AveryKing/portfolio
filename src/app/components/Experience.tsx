@@ -35,7 +35,7 @@ export function Experience() {
   const { ref, isInView } = useInView();
 
   return (
-    <section id="experience" className="relative px-4 py-32">
+    <section id="experience" className="relative px-4 py-20 sm:py-24 lg:py-32">
       <div className="max-w-6xl mx-auto">
         <motion.div
           ref={ref}
@@ -58,7 +58,7 @@ export function Experience() {
                 <div className="absolute inset-0 blur-xl bg-cyan-500/20 rounded-full" />
               </div>
             </motion.div>
-            <h2 className="text-6xl md:text-7xl font-black relative">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black relative leading-tight text-balance">
               <span className="bg-gradient-to-r from-cyan-400 via-emerald-400 to-white bg-clip-text text-transparent">
                 Professional Experience
               </span>
@@ -107,7 +107,7 @@ export function Experience() {
                       whileHover={{ scale: 1.02 }}
                     />
                     
-                    <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500">
+                    <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-6 sm:p-8 border border-white/20 hover:border-white/40 transition-all duration-500">
                       <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6">
                         <div>
                           <div className="flex items-center gap-3 mb-3">
@@ -118,9 +118,9 @@ export function Experience() {
                             >
                               <Briefcase className="w-6 h-6 text-white" />
                             </motion.div>
-                            <h3 className="text-3xl font-black text-white">{exp.title}</h3>
+                            <h3 className="text-2xl sm:text-3xl font-black text-white">{exp.title}</h3>
                           </div>
-                          <p className={`text-2xl font-bold bg-gradient-to-r ${exp.color} bg-clip-text text-transparent mb-3`}>
+                          <p className={`text-xl sm:text-2xl font-bold bg-gradient-to-r ${exp.color} bg-clip-text text-transparent mb-3`}>
                             {exp.company}
                           </p>
                           <div className="flex flex-wrap gap-4 text-gray-300 text-sm">
@@ -146,7 +146,7 @@ export function Experience() {
                             className="flex gap-3 group/item bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-all"
                           >
                             <Sparkles className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-1" />
-                            <p className="text-gray-200 leading-relaxed">{achievement}</p>
+                            <p className="text-gray-200 leading-relaxed text-sm sm:text-base">{achievement}</p>
                           </motion.div>
                         ))}
                       </div>
