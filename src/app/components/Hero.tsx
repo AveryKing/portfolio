@@ -1,4 +1,12 @@
-import { Mail, MapPin, Github, ExternalLink, ChevronDown, Sparkles, Code2 } from "lucide-react";
+import {
+  Mail,
+  MapPin,
+  Github,
+  ExternalLink,
+  ChevronDown,
+  Sparkles,
+  Code2,
+} from "lucide-react";
 import { motion } from "motion/react";
 
 const floatingAnimation = {
@@ -6,8 +14,8 @@ const floatingAnimation = {
   transition: {
     duration: 3,
     repeat: Infinity,
-    ease: "easeInOut"
-  }
+    ease: "easeInOut",
+  },
 };
 
 export function Hero() {
@@ -15,43 +23,43 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
       {/* Animated gradient orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div 
+        <motion.div
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3]
+            opacity: [0.3, 0.5, 0.3],
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
-          className="absolute top-1/4 -left-48 w-96 h-96 bg-emerald-500/30 rounded-full blur-[120px]" 
+          className="absolute top-1/4 -left-48 w-96 h-96 bg-emerald-500/30 rounded-full blur-[120px]"
         />
-        <motion.div 
+        <motion.div
           animate={{
             scale: [1, 1.3, 1],
-            opacity: [0.3, 0.5, 0.3]
+            opacity: [0.3, 0.5, 0.3],
           }}
           transition={{
             duration: 10,
             repeat: Infinity,
             ease: "easeInOut",
-            delay: 1
+            delay: 1,
           }}
-          className="absolute top-1/3 right-0 w-96 h-96 bg-cyan-500/30 rounded-full blur-[120px]" 
+          className="absolute top-1/3 right-0 w-96 h-96 bg-cyan-500/30 rounded-full blur-[120px]"
         />
-        <motion.div 
+        <motion.div
           animate={{
             scale: [1, 1.4, 1],
-            opacity: [0.2, 0.4, 0.2]
+            opacity: [0.2, 0.4, 0.2],
           }}
           transition={{
             duration: 12,
             repeat: Infinity,
             ease: "easeInOut",
-            delay: 2
+            delay: 2,
           }}
-          className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-pink-500/20 rounded-full blur-[120px]" 
+          className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-pink-500/20 rounded-full blur-[120px]"
         />
       </div>
 
@@ -71,8 +79,8 @@ export function Hero() {
                 duration: 4,
                 repeat: Infinity,
                 ease: "easeInOut",
-                delay: 0.5
-              }
+                delay: 0.5,
+              },
             }}
             className="absolute top-32 right-20 text-cyan-400/20"
           >
@@ -85,8 +93,8 @@ export function Hero() {
                 duration: 5,
                 repeat: Infinity,
                 ease: "easeInOut",
-                delay: 1
-              }
+                delay: 1,
+              },
             }}
             className="absolute bottom-40 left-1/4 text-pink-400/20"
           >
@@ -99,7 +107,7 @@ export function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, type: "spring" }}
         >
-          <motion.div 
+          <motion.div
             className="inline-block mb-8"
             animate={{
               scale: [1, 1.05, 1],
@@ -107,7 +115,7 @@ export function Hero() {
             transition={{
               duration: 2,
               repeat: Infinity,
-              ease: "easeInOut"
+              ease: "easeInOut",
             }}
           >
             <span className="px-6 py-3 bg-gradient-to-r from-emerald-500/10 via-cyan-500/10 to-pink-500/10 backdrop-blur-sm border border-emerald-500/30 rounded-full text-emerald-400 text-sm font-semibold shadow-lg shadow-emerald-500/20">
@@ -154,9 +162,17 @@ export function Hero() {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="text-xl md:text-2xl text-gray-400 max-w-4xl mx-auto mb-12 leading-relaxed"
         >
-          Crafting <span className="text-emerald-400 font-semibold">secure, mission-critical applications</span> for GovTech and FinTech.
+          Crafting{" "}
+          <span className="text-emerald-400 font-semibold">
+            secure, mission-critical applications
+          </span>{" "}
+          for GovTech and FinTech.
           <br />
-          Transforming complex requirements into <span className="text-cyan-400 font-semibold">scalable cloud-native solutions</span>.
+          Transforming complex requirements into{" "}
+          <span className="text-cyan-400 font-semibold">
+            scalable cloud-native solutions
+          </span>
+          .
         </motion.p>
 
         <motion.div
@@ -178,14 +194,14 @@ export function Hero() {
             <span>Peoria, IL</span>
           </div>
           <motion.a
-            href="https://github.com/averyking1"
+            href="https://github.com/averyking"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 hover:text-emerald-400 transition-colors group"
             whileHover={{ scale: 1.05 }}
           >
             <Github className="w-5 h-5 group-hover:animate-pulse" />
-            <span>averyking1</span>
+            <span>averyking</span>
           </motion.a>
         </motion.div>
 
@@ -197,7 +213,10 @@ export function Hero() {
         >
           <motion.a
             href="#contact"
-            whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(16, 185, 129, 0.4)" }}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0 0 40px rgba(16, 185, 129, 0.4)",
+            }}
             whileTap={{ scale: 0.95 }}
             className="group relative px-10 py-4 bg-gradient-to-r from-emerald-600 to-cyan-600 rounded-full overflow-hidden shadow-lg shadow-emerald-500/30"
           >
@@ -226,12 +245,12 @@ export function Hero() {
         >
           <motion.div
             animate={{
-              y: [0, 10, 0]
+              y: [0, 10, 0],
             }}
             transition={{
               duration: 2,
               repeat: Infinity,
-              ease: "easeInOut"
+              ease: "easeInOut",
             }}
           >
             <ChevronDown className="w-8 h-8 text-emerald-400" />

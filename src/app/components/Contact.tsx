@@ -39,7 +39,7 @@ const socialLinks = [
   {
     icon: Github,
     label: "GitHub",
-    value: "averyking1",
+    value: "averyking",
     href: "https://github.com/averyking",
     color: "from-gray-600 to-gray-800",
   },
