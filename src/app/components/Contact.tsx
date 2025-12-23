@@ -1,15 +1,6 @@
 import { motion } from "motion/react";
 import { useInView } from "./hooks/useInView";
-import {
-  Mail,
-  Phone,
-  Globe,
-  Github,
-  Linkedin,
-  Send,
-  MapPin,
-  Zap,
-} from "lucide-react";
+import { Mail, Globe, Github, Linkedin, Send, MapPin, Zap } from "lucide-react";
 
 const contactMethods = [
   {
@@ -18,13 +9,6 @@ const contactMethods = [
     value: "avery@averyk.dev",
     href: "mailto:avery@averyk.dev",
     color: "from-emerald-500 to-teal-500",
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "269-214-8032",
-    href: "tel:269-214-8032",
-    color: "from-cyan-500 to-blue-500",
   },
   {
     icon: Globe,
