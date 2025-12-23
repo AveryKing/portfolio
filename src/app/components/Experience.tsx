@@ -1,6 +1,12 @@
 import { motion } from "motion/react";
 import { useInView } from "./hooks/useInView";
-import { Briefcase, Calendar, MapPin, TrendingUp, Sparkles } from "lucide-react";
+import {
+  Briefcase,
+  Calendar,
+  MapPin,
+  TrendingUp,
+  Sparkles,
+} from "lucide-react";
 
 const experiences = [
   {
@@ -13,8 +19,8 @@ const experiences = [
       "Engineered secure, serverless Azure Function APIs for the Arkansas Child Welfare Information System (CWIS), independently designing data exchange solutions that ensure strict state-level compliance.",
       "Bridged the gap between technical teams and Business Analysts, translating complex regulatory requirements into precise functional .NET software specifications.",
       "Architected automated testing suites utilizing Playwright for complex frontend workflows and xUnit for backend services, measurably reducing regression cycles.",
-      "Drove the strategic refactoring of legacy subsystems within an Agile framework, significantly enhancing code maintainability and system performance for core agency operations."
-    ]
+      "Drove the strategic refactoring of legacy subsystems within an Agile framework, significantly enhancing code maintainability and system performance for core agency operations.",
+    ],
   },
   {
     title: "Systems Developer",
@@ -26,9 +32,9 @@ const experiences = [
       "Engineered custom C#/.NET solutions for the Encompass Loan Origination System, automating complex mortgage workflows to support high-volume nationwide operations.",
       "Solely architected and delivered a full-stack internal HR platform using Next.js and TypeScript, modernizing the entire employee onboarding lifecycle and eliminating manual spreadsheet dependencies.",
       "Designed and implemented the end-to-end data warehousing strategy to automate loan data processing, providing stakeholders with real-time access to business-critical reports.",
-      "Served as the primary technical escalation point for Help Desk inquiries, resolving critical defects in proprietary web applications and maintaining web infrastructure."
-    ]
-  }
+      "Served as the primary technical escalation point for Help Desk inquiries, resolving critical defects in proprietary web applications and maintaining web infrastructure.",
+    ],
+  },
 ];
 
 export function Experience() {
@@ -82,45 +88,51 @@ export function Experience() {
                   className="relative group"
                 >
                   {/* Animated Timeline Dot */}
-                  <motion.div 
+                  <motion.div
                     className="absolute left-8 top-8 w-6 h-6 -translate-x-1/2 rounded-full hidden md:block"
                     whileHover={{ scale: 1.5 }}
                   >
-                    <div className={`absolute inset-0 rounded-full bg-gradient-to-r ${exp.color}`} />
-                    <motion.div 
+                    <div
+                      className={`absolute inset-0 rounded-full bg-gradient-to-r ${exp.color}`}
+                    />
+                    <motion.div
                       className={`absolute inset-0 rounded-full bg-gradient-to-r ${exp.color}`}
                       animate={{
                         scale: [1, 1.5, 1],
-                        opacity: [0.7, 0, 0.7]
+                        opacity: [0.7, 0, 0.7],
                       }}
                       transition={{
                         duration: 2,
                         repeat: Infinity,
-                        ease: "easeInOut"
+                        ease: "easeInOut",
                       }}
                     />
                   </motion.div>
 
                   <div className="md:ml-20">
-                    <motion.div 
+                    <motion.div
                       className={`absolute inset-0 bg-gradient-to-r ${exp.color} rounded-3xl blur-2xl opacity-0 group-hover:opacity-20 transition-all duration-500`}
                       whileHover={{ scale: 1.02 }}
                     />
-                    
+
                     <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500">
                       <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6">
                         <div>
                           <div className="flex items-center gap-3 mb-3">
-                            <motion.div 
+                            <motion.div
                               className={`p-3 bg-gradient-to-r ${exp.color} rounded-xl shadow-lg`}
                               whileHover={{ rotate: 360 }}
                               transition={{ duration: 0.6 }}
                             >
                               <Briefcase className="w-6 h-6 text-white" />
                             </motion.div>
-                            <h3 className="text-3xl font-black text-white">{exp.title}</h3>
+                            <h3 className="text-3xl font-black text-white">
+                              {exp.title}
+                            </h3>
                           </div>
-                          <p className={`text-2xl font-bold bg-gradient-to-r ${exp.color} bg-clip-text text-transparent mb-3`}>
+                          <p
+                            className={`text-2xl font-bold bg-gradient-to-r ${exp.color} bg-clip-text text-transparent mb-3`}
+                          >
                             {exp.company}
                           </p>
                           <div className="flex flex-wrap gap-4 text-gray-300 text-sm">
@@ -142,18 +154,19 @@ export function Experience() {
                             key={i}
                             initial={{ opacity: 0, x: -20 }}
                             animate={isInView ? { opacity: 1, x: 0 } : {}}
-                            transition={{ delay: index * 0.3 + i * 0.1, duration: 0.5 }}
+                            transition={{
+                              delay: index * 0.3 + i * 0.1,
+                              duration: 0.5,
+                            }}
                             className="flex gap-3 group/item bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-all"
                           >
                             <Sparkles className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-1" />
-                            <p className="text-gray-200 leading-relaxed">{achievement}</p>
+                            <p className="text-gray-200 leading-relaxed">
+                              {achievement}
+                            </p>
                           </motion.div>
                         ))}
                       </div>
-
-                      {/* Corner accents */}
-                      <div className={`absolute top-4 right-4 w-16 h-16 border-t-2 border-r-2 rounded-tr-2xl opacity-30 bg-gradient-to-r ${exp.color} border-current`} />
-                      <div className={`absolute bottom-4 left-4 w-16 h-16 border-b-2 border-l-2 rounded-bl-2xl opacity-30 bg-gradient-to-r ${exp.color} border-current`} />
                     </div>
                   </div>
                 </motion.div>
