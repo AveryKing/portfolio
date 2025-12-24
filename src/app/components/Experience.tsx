@@ -10,6 +10,20 @@ import {
 
 const experiences = [
   {
+    title: "Software Engineer",
+    company: "Diviora Systems",
+    location: "Remote",
+    period: "Aug 2025 – Present",
+    color: "from-violet-500 to-purple-500",
+    achievements: [
+      "Architecting a high-performance data integration platform using .NET Core and C# to bridge legacy on-premise servers with modern AI models.",
+      "Developed a proprietary \"Data Airlock\" feature that utilizes an event-driven architecture to securely filter and validate inbound data, preventing carrier fraud and double-brokering.",
+      "Implementing a scalable backend on Azure, leveraging Service Bus and Azure Functions to handle complex, high-volume data ingestion for logistics brokerages.",
+      "Engineered automated parsing engines that translate unstructured logistics documents into clean, actionable data, reducing manual entry requirements by an estimated 7.5x.",
+      "Managing the end-to-end lifecycle from initial schema design and API documentation to CI/CD deployment pipelines.",
+    ],
+  },
+  {
     title: "Software Developer",
     company: "RedMane Technology",
     location: "Remote",
