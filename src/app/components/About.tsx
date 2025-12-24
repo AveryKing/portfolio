@@ -85,7 +85,7 @@ export function About() {
                 <p className="text-gray-200">
                   I build{" "}
                   <span className="text-white font-bold bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">
-                    scalable, cloud-native systems on Azure and GCP
+                    scalable, cloud-native systems on Azure
                   </span>{" "}
                   and work across the full stack, from architecting APIs and
                   data systems to delivering React-based user interfaces. I've

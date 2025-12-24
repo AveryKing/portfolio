@@ -18,7 +18,7 @@ const skillCategories = [
   {
     title: "Cloud & DevOps",
     icon: Cloud,
-    skills: ["Azure", "GCP", "Docker", "GitHub Actions", "CI/CD"],
+    skills: ["Azure", "Docker", "GitHub Actions", "CI/CD"],
     color: "from-purple-500 to-pink-500"
   },
   {
