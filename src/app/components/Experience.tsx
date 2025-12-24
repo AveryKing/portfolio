@@ -14,13 +14,12 @@ const experiences = [
     company: "Diviora Systems",
     location: "Remote",
     period: "Aug 2025 – Present",
-    color: "from-violet-500 to-purple-500",
+    color: "from-blue-500 to-cyan-500",
     achievements: [
-      "Architecting a high-performance data integration platform using .NET Core and C# to bridge legacy on-premise servers with modern AI models.",
-      "Developed a proprietary \"Data Airlock\" feature that utilizes an event-driven architecture to securely filter and validate inbound data, preventing carrier fraud and double-brokering.",
-      "Implementing a scalable backend on Azure, leveraging Service Bus and Azure Functions to handle complex, high-volume data ingestion for logistics brokerages.",
+      "Architected a high-performance platform using .NET Core, C#, Azure Service Bus, and Azure Functions to bridge legacy on-premise servers with modern AI models and handle high-volume data ingestion.",
+      "Developed a unique \"Data Airlock\" feature utilizing an event-driven architecture to securely filter and validate inbound data, proactively preventing carrier fraud and double-brokering.",
       "Engineered automated parsing engines that translate unstructured logistics documents into clean, actionable data, reducing manual entry requirements by an estimated 7.5x.",
-      "Managing the end-to-end lifecycle from initial schema design and API documentation to CI/CD deployment pipelines.",
+      "Managed the full engineering lifecycle from initial schema design and API documentation to the implementation of automated CI/CD deployment pipelines.",
     ],
   },
   {
@@ -28,7 +27,7 @@ const experiences = [
     company: "RedMane Technology",
     location: "Remote",
     period: "Jul 2023 – Jul 2025",
-    color: "from-emerald-500 to-teal-500",
+    color: "from-orange-500 to-amber-500",
     achievements: [
       "Engineered secure, serverless Azure Function APIs for the Arkansas Child Welfare Information System (CWIS), independently designing data exchange solutions that ensure strict state-level compliance.",
       "Bridged the gap between technical teams and Business Analysts, translating complex regulatory requirements into precise functional .NET software specifications.",
@@ -41,7 +40,7 @@ const experiences = [
     company: "VanDyk Mortgage",
     location: "Remote",
     period: "Apr 2022 – Jul 2023",
-    color: "from-cyan-500 to-blue-500",
+    color: "from-emerald-500 to-green-500",
     achievements: [
       "Engineered custom C#/.NET solutions for the Encompass Loan Origination System, automating complex mortgage workflows to support high-volume nationwide operations.",
       "Solely architected and delivered a full-stack internal HR platform using Next.js and TypeScript, modernizing the entire employee onboarding lifecycle and eliminating manual spreadsheet dependencies.",
