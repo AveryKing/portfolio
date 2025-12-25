@@ -38,9 +38,7 @@ export function Hero() {
           <p className="text-xl sm:text-2xl md:text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-violet-400 to-purple-400">
             Software Engineer
           </p>
-          <p className="mt-2 text-lg text-gray-500">
-            .NET • Node.js • Azure • Cloud Architecture
-          </p>
+          <p className="mt-2 text-lg text-gray-500">.NET • Node.js • Azure</p>
         </motion.div>
 
         {/* Description */}
