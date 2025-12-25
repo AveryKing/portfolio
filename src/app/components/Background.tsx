@@ -12,7 +12,7 @@ export function Background() {
 
     const setCanvasSize = () => {
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight * 3; // Extended for scrolling
+      canvas.height = window.innerHeight * 1.5; // Extended for scrolling
     };
     setCanvasSize();
 
