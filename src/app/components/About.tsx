@@ -50,12 +50,16 @@ export function About() {
                 <div className="absolute inset-0 blur-xl bg-emerald-500/20 rounded-full" />
               </div>
             </motion.div>
-            <h2 className="text-6xl md:text-7xl font-black mb-6 relative">
+            <h2 className="text-3xl md:text-5xl font-black mb-6 relative leading-tight">
               <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-white bg-clip-text text-transparent">
-                Building the Future
+                Building secure, reliable systems for high-stakes environments.
+                Transforming complex requirements into scalable cloud-native
+                solutions.
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 via-cyan-400 to-white bg-clip-text text-transparent blur-2xl opacity-30">
-                Building the Future
+                Building secure, reliable systems for high-stakes environments.
+                Transforming complex requirements into scalable cloud-native
+                solutions.
               </div>
             </h2>
           </div>

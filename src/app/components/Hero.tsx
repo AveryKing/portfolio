@@ -152,7 +152,7 @@ export function Hero() {
           </p>
           <div className="flex items-center justify-center gap-2 text-lg text-gray-400">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span>Cloud Architecture • Azure</span>
+            <span>Backend Engineering • System Design</span>
           </div>
         </motion.div>
 
