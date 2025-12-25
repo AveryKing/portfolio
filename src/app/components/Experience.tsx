@@ -1,51 +1,41 @@
 import { motion } from "motion/react";
 import { useInView } from "./hooks/useInView";
-import {
-  Briefcase,
-  Calendar,
-  MapPin,
-  TrendingUp,
-  Sparkles,
-} from "lucide-react";
 
 const experiences = [
   {
     title: "Software Engineer",
     company: "Diviora Systems",
     location: "Remote",
-    period: "Aug 2025 – Present",
-    color: "from-blue-500 to-cyan-500",
+    period: "Aug 2025 - Present",
     achievements: [
-      "Architected a high-performance platform using .NET Core, C#, Azure Service Bus, and Azure Functions to bridge legacy on-premise servers with modern AI models and handle high-volume data ingestion.",
-      'Developed a unique "Data Airlock" feature utilizing an event-driven architecture to securely filter and validate inbound data, proactively preventing carrier fraud and double-brokering.',
-      "Engineered automated parsing engines that translate unstructured logistics documents into clean, actionable data, reducing manual entry requirements by an estimated 7.5x.",
-      "Managed the full engineering lifecycle from initial schema design and API documentation to the implementation of automated CI/CD deployment pipelines.",
+      "Architected a high-performance platform using .NET Core, C#, Azure Service Bus, and Azure Functions to bridge legacy servers with modern AI models",
+      "Developed a unique Data Airlock feature utilizing event-driven architecture to securely filter and validate inbound data",
+      "Engineered automated parsing engines that translate unstructured logistics documents into actionable data, reducing manual entry by 7.5x",
+      "Managed the full engineering lifecycle from schema design to CI/CD deployment pipelines",
     ],
   },
   {
     title: "Software Developer",
     company: "RedMane Technology",
     location: "Remote",
-    period: "Jul 2023 – Jul 2025",
-    color: "from-orange-500 to-amber-500",
+    period: "Jul 2023 - Jul 2025",
     achievements: [
-      "Engineered secure, serverless Azure Function APIs for the Arkansas Child Welfare Information System (CWIS), independently designing data exchange solutions that ensure strict state-level compliance.",
-      "Bridged the gap between technical teams and Business Analysts, translating complex regulatory requirements into precise functional .NET software specifications.",
-      "Architected automated testing suites utilizing Playwright for complex frontend workflows and xUnit for backend services, measurably reducing regression cycles.",
-      "Drove the strategic refactoring of legacy subsystems within an Agile framework, significantly enhancing code maintainability and system performance for core agency operations.",
+      "Engineered secure, serverless Azure Function APIs for Arkansas Child Welfare Information System ensuring state-level compliance",
+      "Bridged technical teams and Business Analysts, translating complex regulatory requirements into .NET specifications",
+      "Architected automated testing suites using Playwright and xUnit, reducing regression cycles",
+      "Drove strategic refactoring of legacy subsystems, enhancing maintainability and performance",
     ],
   },
   {
     title: "Systems Developer",
     company: "VanDyk Mortgage",
     location: "Remote",
-    period: "Apr 2022 – Jul 2023",
-    color: "from-emerald-500 to-green-500",
+    period: "Apr 2022 - Jul 2023",
     achievements: [
-      "Engineered custom C#/.NET solutions for the Encompass Loan Origination System, automating complex mortgage workflows to support high-volume nationwide operations.",
-      "Solely architected and delivered a full-stack internal HR platform using Next.js and TypeScript, modernizing the entire employee onboarding lifecycle and eliminating manual spreadsheet dependencies.",
-      "Designed and implemented the end-to-end data warehousing strategy to automate loan data processing, providing stakeholders with real-time access to business-critical reports.",
-      "Served as the primary technical escalation point for Help Desk inquiries, resolving critical defects in proprietary web applications and maintaining web infrastructure.",
+      "Engineered custom C#/.NET solutions for Encompass Loan Origination System, automating mortgage workflows",
+      "Solely architected and delivered a full-stack internal HR platform using Next.js and TypeScript",
+      "Designed end-to-end data warehousing strategy to automate loan data processing",
+      "Served as primary technical escalation point, resolving critical defects in web applications",
     ],
   },
 ];
@@ -54,137 +44,69 @@ export function Experience() {
   const { ref, isInView } = useInView();
 
   return (
-    <section id="experience" className="relative px-4 py-32">
-      <div className="max-w-6xl mx-auto">
+    <section id="experience" className="relative px-6 py-32">
+      <div className="max-w-4xl mx-auto">
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <div className="text-center mb-20">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.6 }}
-              className="inline-block mb-4"
-            >
-              <div className="relative">
-                <span className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-semibold inline-flex items-center gap-2">
-                  <TrendingUp className="w-4 h-4" />
-                  Career Journey
-                </span>
-                <div className="absolute inset-0 blur-xl bg-cyan-500/20 rounded-full" />
-              </div>
-            </motion.div>
-            <h2 className="text-6xl md:text-7xl font-black relative">
-              <span className="bg-gradient-to-r from-cyan-400 via-emerald-400 to-white bg-clip-text text-transparent">
-                Professional Experience
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-emerald-400 to-white bg-clip-text text-transparent blur-2xl opacity-30">
-                Professional Experience
-              </div>
-            </h2>
+          {/* Section Label */}
+          <div className="flex items-center gap-4 mb-12">
+            <span className="text-sm font-medium text-violet-400 tracking-wider uppercase">
+              Experience
+            </span>
+            <div className="flex-1 h-px bg-gradient-to-r from-violet-400/50 to-transparent" />
           </div>
 
-          <div className="relative">
-            {/* Gradient connecting line */}
-            <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-emerald-500 via-cyan-500 to-transparent hidden md:block rounded-full" />
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-16">
+            Where I have{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-purple-400">
+              made an impact
+            </span>
+          </h2>
 
-            <div className="space-y-12">
-              {experiences.map((exp, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ delay: index * 0.3, duration: 0.8 }}
-                  className="relative group"
-                >
-                  {/* Animated Timeline Dot */}
-                  <motion.div
-                    className="absolute left-8 top-8 w-6 h-6 -translate-x-1/2 rounded-full hidden md:block"
-                    whileHover={{ scale: 1.5 }}
-                  >
-                    <div
-                      className={`absolute inset-0 rounded-full bg-gradient-to-r ${exp.color}`}
-                    />
-                    <motion.div
-                      className={`absolute inset-0 rounded-full bg-gradient-to-r ${exp.color}`}
-                      animate={{
-                        scale: [1, 1.5, 1],
-                        opacity: [0.7, 0, 0.7],
-                      }}
-                      transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                      }}
-                    />
-                  </motion.div>
+          {/* Timeline */}
+          <div className="space-y-12">
+            {experiences.map((exp, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: index * 0.2, duration: 0.6 }}
+                className="relative pl-8 border-l border-white/10 hover:border-violet-500/50 transition-colors"
+              >
+                {/* Timeline dot */}
+                <div className="absolute left-0 top-0 w-3 h-3 -translate-x-1/2 rounded-full bg-violet-500" />
 
-                  <div className="md:ml-20">
-                    <motion.div
-                      className={`absolute inset-0 bg-gradient-to-r ${exp.color} rounded-3xl blur-2xl opacity-0 group-hover:opacity-20 transition-all duration-500`}
-                      whileHover={{ scale: 1.02 }}
-                    />
-
-                    <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500">
-                      <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6">
-                        <div>
-                          <div className="flex items-center gap-3 mb-3">
-                            <motion.div
-                              className={`p-3 bg-gradient-to-r ${exp.color} rounded-xl shadow-lg`}
-                              whileHover={{ rotate: 360 }}
-                              transition={{ duration: 0.6 }}
-                            >
-                              <Briefcase className="w-6 h-6 text-white" />
-                            </motion.div>
-                            <h3 className="text-3xl font-black text-white">
-                              {exp.title}
-                            </h3>
-                          </div>
-                          <p
-                            className={`text-2xl font-bold bg-gradient-to-r ${exp.color} bg-clip-text text-transparent mb-3`}
-                          >
-                            {exp.company}
-                          </p>
-                          <div className="flex flex-wrap gap-4 text-gray-300 text-sm">
-                            <div className="flex items-center gap-2 bg-white/5 px-3 py-1.5 rounded-full">
-                              <MapPin className="w-4 h-4 text-emerald-400" />
-                              <span>{exp.location}</span>
-                            </div>
-                            <div className="flex items-center gap-2 bg-white/5 px-3 py-1.5 rounded-full">
-                              <Calendar className="w-4 h-4 text-cyan-400" />
-                              <span>{exp.period}</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="space-y-4">
-                        {exp.achievements.map((achievement, i) => (
-                          <motion.div
-                            key={i}
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={isInView ? { opacity: 1, x: 0 } : {}}
-                            transition={{
-                              delay: index * 0.3 + i * 0.1,
-                              duration: 0.5,
-                            }}
-                            className="flex gap-3 group/item bg-white/5 p-4 rounded-xl hover:bg-white/10 transition-all"
-                          >
-                            <Sparkles className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-1" />
-                            <p className="text-gray-200 leading-relaxed">
-                              {achievement}
-                            </p>
-                          </motion.div>
-                        ))}
-                      </div>
-                    </div>
+                <div className="mb-4">
+                  <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2 mb-2">
+                    <h3 className="text-xl font-bold text-white">{exp.title}</h3>
+                    <span className="text-violet-400 font-medium">
+                      {exp.company}
+                    </span>
                   </div>
-                </motion.div>
-              ))}
-            </div>
+                  <div className="flex items-center gap-4 text-sm text-gray-500">
+                    <span>{exp.period}</span>
+                    <span>•</span>
+                    <span>{exp.location}</span>
+                  </div>
+                </div>
+
+                <ul className="space-y-3">
+                  {exp.achievements.map((achievement, i) => (
+                    <li
+                      key={i}
+                      className="text-gray-400 leading-relaxed flex gap-3"
+                    >
+                      <span className="text-violet-400 mt-1.5">›</span>
+                      <span>{achievement}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
       </div>

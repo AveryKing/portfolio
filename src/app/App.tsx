@@ -9,15 +9,17 @@ import { Background } from "./components/Background";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-black text-white overflow-x-hidden">
+    <div className="min-h-screen bg-[#050508] text-white overflow-x-hidden">
       <Background />
       <Navigation />
-      <Hero />
-      <About />
-      <Experience />
-      <Skills />
-      <Education />
-      <Contact />
+      <main className="relative z-10">
+        <Hero />
+        <About />
+        <Experience />
+        <Skills />
+        <Education />
+        <Contact />
+      </main>
     </div>
   );
 }

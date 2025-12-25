@@ -10,126 +10,119 @@ export function Background() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    const setCanvasSize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight * 3; // Extended for scrolling
+    };
+    setCanvasSize();
 
-    // Create flowing waves
-    const waves: Array<{
-      y: number;
-      length: number;
-      amplitude: number;
-      frequency: number;
-      speed: number;
-      color: string;
-    }> = [
-      {
-        y: canvas.height * 0.3,
-        length: canvas.width,
-        amplitude: 50,
-        frequency: 0.01,
-        speed: 0.02,
-        color: "rgba(16, 185, 129, 0.1)" // emerald
-      },
-      {
-        y: canvas.height * 0.5,
-        length: canvas.width,
-        amplitude: 70,
-        frequency: 0.008,
-        speed: 0.015,
-        color: "rgba(6, 182, 212, 0.08)" // cyan
-      },
-      {
-        y: canvas.height * 0.7,
-        length: canvas.width,
-        amplitude: 60,
-        frequency: 0.012,
-        speed: 0.025,
-        color: "rgba(236, 72, 153, 0.06)" // pink
-      }
-    ];
-
-    // Create floating orbs
-    const orbs: Array<{
+    // Subtle floating particles
+    const particles: Array<{
       x: number;
       y: number;
-      radius: number;
-      vx: number;
-      vy: number;
-      color: string;
+      size: number;
+      speedX: number;
+      speedY: number;
       opacity: number;
     }> = [];
 
-    for (let i = 0; i < 30; i++) {
-      orbs.push({
+    for (let i = 0; i < 50; i++) {
+      particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        radius: Math.random() * 100 + 50,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.3,
-        color: ["#10b981", "#06b6d4", "#ec4899", "#f59e0b"][Math.floor(Math.random() * 4)],
-        opacity: Math.random() * 0.05 + 0.02
+        size: Math.random() * 2 + 0.5,
+        speedX: (Math.random() - 0.5) * 0.3,
+        speedY: (Math.random() - 0.5) * 0.3,
+        opacity: Math.random() * 0.3 + 0.1,
       });
     }
 
-    let increment = 0;
     let animationFrameId: number;
 
     const animate = () => {
-      ctx.fillStyle = "rgba(0, 0, 0, 0.02)";
+      ctx.fillStyle = "#050508";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      // Draw waves
-      waves.forEach((wave) => {
+      // Draw subtle gradient mesh
+      const gradient1 = ctx.createRadialGradient(
+        canvas.width * 0.2,
+        canvas.height * 0.1,
+        0,
+        canvas.width * 0.2,
+        canvas.height * 0.1,
+        canvas.width * 0.5
+      );
+      gradient1.addColorStop(0, "rgba(59, 130, 246, 0.08)");
+      gradient1.addColorStop(1, "transparent");
+      ctx.fillStyle = gradient1;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      const gradient2 = ctx.createRadialGradient(
+        canvas.width * 0.8,
+        canvas.height * 0.3,
+        0,
+        canvas.width * 0.8,
+        canvas.height * 0.3,
+        canvas.width * 0.4
+      );
+      gradient2.addColorStop(0, "rgba(139, 92, 246, 0.06)");
+      gradient2.addColorStop(1, "transparent");
+      ctx.fillStyle = gradient2;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      const gradient3 = ctx.createRadialGradient(
+        canvas.width * 0.5,
+        canvas.height * 0.6,
+        0,
+        canvas.width * 0.5,
+        canvas.height * 0.6,
+        canvas.width * 0.5
+      );
+      gradient3.addColorStop(0, "rgba(6, 182, 212, 0.04)");
+      gradient3.addColorStop(1, "transparent");
+      ctx.fillStyle = gradient3;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Draw particles
+      particles.forEach((particle) => {
+        particle.x += particle.speedX;
+        particle.y += particle.speedY;
+
+        if (particle.x < 0) particle.x = canvas.width;
+        if (particle.x > canvas.width) particle.x = 0;
+        if (particle.y < 0) particle.y = canvas.height;
+        if (particle.y > canvas.height) particle.y = 0;
+
         ctx.beginPath();
-        ctx.moveTo(0, wave.y);
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 255, 255, ${particle.opacity})`;
+        ctx.fill();
+      });
 
-        for (let x = 0; x < wave.length; x++) {
-          const y =
-            wave.y +
-            Math.sin(x * wave.frequency + increment * wave.speed) * wave.amplitude;
-          ctx.lineTo(x, y);
-        }
-
-        ctx.strokeStyle = wave.color;
-        ctx.lineWidth = 3;
+      // Subtle grid pattern
+      ctx.strokeStyle = "rgba(255, 255, 255, 0.02)";
+      ctx.lineWidth = 1;
+      const gridSize = 80;
+      for (let x = 0; x < canvas.width; x += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, canvas.height);
         ctx.stroke();
-      });
+      }
+      for (let y = 0; y < canvas.height; y += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(canvas.width, y);
+        ctx.stroke();
+      }
 
-      // Draw and move orbs
-      orbs.forEach((orb) => {
-        orb.x += orb.vx;
-        orb.y += orb.vy;
-
-        if (orb.x < -orb.radius) orb.x = canvas.width + orb.radius;
-        if (orb.x > canvas.width + orb.radius) orb.x = -orb.radius;
-        if (orb.y < -orb.radius) orb.y = canvas.height + orb.radius;
-        if (orb.y > canvas.height + orb.radius) orb.y = -orb.radius;
-
-        const gradient = ctx.createRadialGradient(orb.x, orb.y, 0, orb.x, orb.y, orb.radius);
-        gradient.addColorStop(0, orb.color + Math.floor(orb.opacity * 255).toString(16).padStart(2, '0'));
-        gradient.addColorStop(1, orb.color + "00");
-
-        ctx.fillStyle = gradient;
-        ctx.fillRect(
-          orb.x - orb.radius,
-          orb.y - orb.radius,
-          orb.radius * 2,
-          orb.radius * 2
-        );
-      });
-
-      increment += 1;
       animationFrameId = requestAnimationFrame(animate);
     };
 
     animate();
 
     const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      waves.forEach((wave) => {
-        wave.length = canvas.width;
-      });
+      setCanvasSize();
     };
 
     window.addEventListener("resize", handleResize);
@@ -146,9 +139,7 @@ export function Background() {
         ref={canvasRef}
         className="fixed inset-0 pointer-events-none z-0"
       />
-      <div className="fixed inset-0 bg-gradient-to-br from-emerald-950/30 via-black to-pink-950/30 pointer-events-none z-0" />
-      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-cyan-900/20 via-transparent to-transparent pointer-events-none z-0" />
-      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-emerald-900/20 via-transparent to-transparent pointer-events-none z-0" />
+      <div className="fixed inset-0 bg-gradient-to-b from-transparent via-[#050508]/50 to-[#050508] pointer-events-none z-0" />
     </>
   );
 }
