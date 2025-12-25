@@ -17,7 +17,7 @@ const experiences = [
     color: "from-blue-500 to-cyan-500",
     achievements: [
       "Architected a high-performance platform using .NET Core, C#, Azure Service Bus, and Azure Functions to bridge legacy on-premise servers with modern AI models and handle high-volume data ingestion.",
-      "Developed a unique \"Data Airlock\" feature utilizing an event-driven architecture to securely filter and validate inbound data, proactively preventing carrier fraud and double-brokering.",
+      'Developed a unique "Data Airlock" feature utilizing an event-driven architecture to securely filter and validate inbound data, proactively preventing carrier fraud and double-brokering.',
       "Engineered automated parsing engines that translate unstructured logistics documents into clean, actionable data, reducing manual entry requirements by an estimated 7.5x.",
       "Managed the full engineering lifecycle from initial schema design and API documentation to the implementation of automated CI/CD deployment pipelines.",
     ],

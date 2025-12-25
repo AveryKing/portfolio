@@ -70,39 +70,36 @@ export function About() {
             <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-12 border border-white/20 hover:border-emerald-500/40 transition-all">
               <div className="space-y-6 text-lg leading-relaxed">
                 <p className="text-gray-200">
-                  I'm a Software Engineer with{" "}
+                  I thrive at the intersection of complex logic and high-stakes
+                  delivery. Over the last{" "}
                   <span className="text-white font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-                    3+ years of professional experience
-                  </span>{" "}
-                  designing and delivering secure, mission-critical systems in{" "}
-                  <span className="text-emerald-400 font-bold">
-                    GovTech and FinTech
+                    3+ years
                   </span>
-                  , with a strong focus on backend and platform development in
-                  the .NET ecosystem and modern JavaScript frameworks.
+                  , I’ve built a strong foundation in designing systems where
+                  security and reliability are foundational.
                 </p>
 
                 <p className="text-gray-200">
-                  I build{" "}
+                  My experience includes building{" "}
                   <span className="text-white font-bold bg-gradient-to-r from-cyan-400 to-pink-400 bg-clip-text text-transparent">
-                    scalable, cloud-native systems on Azure
+                    cloud-native solutions
                   </span>{" "}
-                  and work across the full stack, from architecting APIs and
-                  data systems to delivering React-based user interfaces. I've
-                  contributed to large, high-volume platforms supporting state
-                  agencies and nationwide mortgage operations, with an emphasis
-                  on system modernization, automated testing, and long-term
-                  maintainability.
+                  for government agencies and streamlining nationwide mortgage
+                  operations. I specialize in architecting clean, resilient
+                  systems using{" "}
+                  <span className="text-emerald-400 font-bold">
+                    .NET, Node.js, and Azure
+                  </span>
+                  . I prioritize comprehensive automated testing and system
+                  modernization to ensure long-term stability and performance
+                  for high-volume platforms.
                 </p>
 
                 <p className="text-gray-200">
-                  I translate complex business requirements into clear, scalable
-                  technical solutions and take ownership from
-                  <span className="text-white font-bold">
-                    {" "}
-                    design through deployment
-                  </span>
-                  .
+                  I enjoy bridging the gap between technical constraints and
+                  business goals, ensuring that every solution provides
+                  measurable value and scales effectively with the organization’s
+                  needs.
                 </p>
               </div>
 

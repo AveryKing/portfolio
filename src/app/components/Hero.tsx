@@ -147,7 +147,7 @@ export function Hero() {
         >
           <p className="text-2xl md:text-3xl font-bold mb-2">
             <span className="bg-gradient-to-r from-gray-100 to-gray-400 bg-clip-text text-transparent">
-              .NET & JavaScript Specialist
+              .NET, Node.js & Azure Specialist
             </span>
           </p>
           <div className="flex items-center justify-center gap-2 text-lg text-gray-400">
@@ -166,7 +166,7 @@ export function Hero() {
           <span className="text-emerald-400 font-semibold">
             secure, mission-critical applications
           </span>{" "}
-          for GovTech and FinTech.
+          for high-stakes environments.
           <br />
           Transforming complex requirements into{" "}
           <span className="text-cyan-400 font-semibold">
