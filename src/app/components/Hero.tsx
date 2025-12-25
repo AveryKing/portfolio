@@ -127,12 +127,18 @@ export function Hero() {
           transition={{ delay: 1.2, duration: 1 }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2"
         >
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          <a
+            href="#about"
+            aria-label="Scroll to about section"
+            className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 hover:bg-white/10 transition-colors"
           >
-            <ArrowDown className="w-5 h-5 text-gray-500" />
-          </motion.div>
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <ArrowDown className="w-5 h-5 text-gray-500" />
+            </motion.div>
+          </a>
         </motion.div>
       </div>
     </section>

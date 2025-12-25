@@ -1,12 +1,6 @@
 import { motion } from "motion/react";
 import { useInView } from "./hooks/useInView";
 
-const stats = [
-  { number: "3+", label: "Years Experience" },
-  { number: "2", label: "Industries" },
-  { number: "100%", label: "Remote" },
-];
-
 export function About() {
   const { ref, isInView } = useInView();
 
@@ -63,23 +57,6 @@ export function About() {
               </p>
             </div>
           </div>
-
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="grid grid-cols-3 gap-8 mt-16 pt-16 border-t border-white/10"
-          >
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-sm text-gray-500">{stat.label}</div>
-              </div>
-            ))}
-          </motion.div>
         </motion.div>
       </div>
     </section>
