@@ -2,18 +2,7 @@ import { motion } from "motion/react";
 import { useInView } from "./hooks/useInView";
 
 const experiences = [
-  {
-    title: "Software Engineer",
-    company: "Diviora Systems",
-    location: "Remote",
-    period: "Aug 2025 - Present",
-    achievements: [
-      "Architected a high-performance platform using .NET Core, C#, Azure Service Bus, and Azure Functions to bridge legacy servers with modern AI models",
-      "Developed a unique Data Airlock feature utilizing event-driven architecture to securely filter and validate inbound data",
-      "Engineered automated parsing engines that translate unstructured documents into actionable data, reducing manual entry by 7.5x",
-      "Managed the full engineering lifecycle from schema design to CI/CD deployment pipelines",
-    ],
-  },
+
   {
     title: "Software Developer",
     company: "RedMane Technology",
